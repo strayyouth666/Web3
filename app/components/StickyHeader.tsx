@@ -46,6 +46,19 @@ const StickyHeader: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-opacity-50  p-6 z-10">
       <div className="flex items-center justify-between">
+        <ActionStarryButton
+                onClick={async () => {
+                  const signMessage = async () => { 
+                    window.open(
+                            `https://intip.in/FaruqPortofolio`,
+                            "_blank"
+                          );
+                  };
+                  toast.promise(signMessage, {
+                  });
+                }}
+                name="Portofolio"
+              ></ActionStarryButton>
         <div>
           {/* <Image
             style={{ width: '200px', cursor: 'pointer' }}
@@ -57,6 +70,7 @@ const StickyHeader: React.FC = () => {
             }}
           /> */}
         </div>
+        
         <div className="flex flex-col space-y-4">
           <StarryButton
             connected={publicKey !== undefined}
