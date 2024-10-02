@@ -77,10 +77,10 @@ function Shapes({ transition }) {
       <Switch location={location}>
         <Route path='/'>
           <Shape
-            geometry={torusknot}
-            material={material2}
+            geometry={torus}
+            material={material1}
             textures={textures}
-            color='#272730'
+            color='#FFC0CB'
             opacity={opacity}
           />
         </Route>
